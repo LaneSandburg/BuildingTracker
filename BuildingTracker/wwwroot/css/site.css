@@ -1,0 +1,35 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+table, th, td {
+    
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    background-color:lightblue;
+}
+td.Box {
+/*    width: 25%;
+    height: 25%;*/
+    padding: 1em;
+    border: 1px dashed black;
+    background-color:white;
+}
