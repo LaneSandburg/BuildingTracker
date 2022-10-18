@@ -1,22 +1,18 @@
 ﻿@model IEnumerable<DataObjects.Room>
 @{
     ViewData["Title"] = ViewBag.title;    
-    DataObjects.Room[] rooms = { };
-    foreach (var item in Model)
-    {
-        rooms.Append(item);
-    }
-    var a1 = rooms[0].RoomID;
+    DataObjects.Room[] rooms;
+    rooms = new DataObjects.Room[Model.Count()];
+    rooms = Model.ToArray();    
 }
 <head>
     <script src="~/lib/jquery/dist/jquery.min.js"> </script>
     <script src="~/js/jquery.rwdImageMaps.min.js"></script>
 </head>
 <body>
-
 <div class="text-center" style="max-width: 100%">
         <map name="Office-map">
-            <area target="" alt="A1" title="A1" href="@Url.Action("RoomDetails", "Map","")" coords="281,458,219,457,218,404,260,403,261,423,283,422" shape="poly">
+            <area target="" alt="A1" title="A1" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[0].RoomID})" coords="281,458,219,457,218,404,260,403,261,423,283,422" shape="poly">
             <area target="" alt="A2" title="A2" href="" coords="285,415,263,387" shape="rect">
             <area target="" alt="A3" title="A3" href="" coords="246,399,220,335" shape="rect">
             <area target="" alt="A4" title="A4" href="" coords="276,370,249,337" shape="rect">
