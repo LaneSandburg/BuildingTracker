@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using DataObjects;
 
 namespace BuildingTracker.Data
 {
@@ -9,5 +10,6 @@ namespace BuildingTracker.Data
             : base(options)
         {
         }
+        public DbSet<DataObjects.Room> Room { get; set; }
     }
 }

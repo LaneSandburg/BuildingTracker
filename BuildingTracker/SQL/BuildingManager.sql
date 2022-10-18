@@ -77,6 +77,8 @@ print '' print '*** creating Room table'
 GO
 CREATE TABLE [dbo].[Room](
 	[RoomID]		[nvarchar](4)			NOT NULL,
+	[RoomNotes]		[nvarChar](100)			NULL,
+	
 	CONSTRAINT [pk_RoomID] 
 		PRIMARY KEY([RoomID])
 )
@@ -158,135 +160,6 @@ CREATE TABLE [dbo].[RoomFireAlarm](
 		REFERENCES [FireAlarm]([FPanelID]) ON UPDATE CASCADE
 )
 GO
-
-/**********************************************************Insert statements below **********************************************************/
-
-print '' print '*** creating sample Users records'
-GO
-INSERT INTO [dbo].[Users]
-([FirstName],[LastName],[Email])
-VALUES
-('Admin','admin','admin@syncbak.com'),
-('Tim','Kris','tim.kris@syncbak.com')
-GO
-
-print '' print '*** creating sample Roles records'
-GO
-INSERT INTO [dbo].[Role]
-([RoleID],[Description])
-VALUES
-('Admin',"Company Admin")
-GO
-
-print '' print '*** creating sample UserRoles records'
-GO
-INSERT INTO [dbo].[UserRole]
-([UserID],[RoleID])
-VALUES
-(100,"Admin")
-GO
-
-print '' print '*** creating sample Room records'
-GO
-INSERT INTO [dbo].[Room]
-([RoomID])
-VALUES
-("A01"),
-("A02"),
-("A03"),
-("A04"),
-("A05"),
-("A06"),
-("A07"),
-("A08"),
-("A09"),
-("A10"),
-("A11"),
-("A12"),
-("A13"),
-("A14"),
-("A15"),
-("A16"),
-("A17"),
-("A18"),
-("A19"),
-("A20"),
-("A21"),
-("A22"),
-("A23"),
-("A24"),
-("A25"),
-("A26"),
-("A27"),
-("A28"),
-("A29"),
-("A30"),
-("A31"),
-("A32"),
-("A33"),
-("A34"),
-("A35"),
-("A36"),
-("A37"),
-("A38"),
-("A39"),
-("A40"),
-("A41"),
-("A42"),
-("A43"),
-("A44"),
-("A45"),
-("A46"),
-("A47"),
-("A48"),
-("A49"),
-("A50"),
-("A51"),
-("A52"),
-("A53"),
-("B01"),
-("B02"),
-("B03"),
-("B04"),
-("B05"),
-("B06"),
-("B07"),
-("B08"),
-("B09"),
-("B10"),
-("B11"),
-("B12"),
-("B13"),
-("B14"),
-("B15"),
-("B16"),
-("B17"),
-("B18"),
-("B19"),
-("B20"),
-("LL01"),
-("LL02"),
-("LL03"),
-("LL04"),
-("LL05"),
-("LL06"),
-("LL07"),
-("LL08"),
-("LL09"),
-("LL10"),
-("LL11"),
-("LL12"),
-("LL13"),
-("LL14"),
-("LL15"),
-("LL16"),
-("LL17"),
-("LL18"),
-("LL19"),
-("LL20")
-GO
-
-
 
 /**********************************************************Stored procedures below **********************************************************/
 print '' print '*** creating sp_authenticate_user'
@@ -540,7 +413,178 @@ GO
 CREATE PROCEDURE [sp_select_all_rooms]
 AS
 BEGIN
-	SELECT  [RoomID]
+	SELECT  [RoomID],[RoomNotes]
 	FROM	[dbo].[Room]
 END
+GO
+
+print '' print '*** creating sp_select_room_by_id'
+GO
+CREATE PROCEDURE [sp_select_room_by_id](
+	@RoomID [nvarchar] (4)
+)
+AS
+BEGIN
+	SELECT [RoomID],[RoomNotes]
+	FROM	[dbo].[Room]
+	WHERE [RoomID] = @RoomID
+	
+END
+GO
+
+print '' print '*** creating sp_insert_room'
+GO
+CREATE PROCEDURE [sp_insert_room](
+	@RoomID 	[nvarchar](4)
+)
+AS
+BEGIN	
+	INSERT INTO [dbo].[Room]
+		([RoomID])
+		VALUES
+			(@RoomID)
+			RETURN SCOPE_IDENTITY()
+END
+GO
+
+print '' print '*** creating sp_delete_room'
+GO
+CREATE PROCEDURE [sp_delete_room](
+	@RoomID		 [nvarchar](4)
+			
+)
+AS
+BEGIN
+DELETE From [dbo].[Room]
+	WHERE [RoomID]= @RoomID
+		
+END
+GO
+
+
+/**********************************************************Insert statements below **********************************************************/
+
+print '' print '*** creating sample Users records'
+GO
+INSERT INTO [dbo].[Users]
+([FirstName],[LastName],[Email])
+VALUES
+('Admin','admin','admin@syncbak.com'),
+('Tim','Kris','tim.kris@syncbak.com')
+GO
+
+print '' print '*** creating sample Roles records'
+GO
+INSERT INTO [dbo].[Role]
+([RoleID],[Description])
+VALUES
+('Admin',"Company Admin")
+GO
+
+print '' print '*** creating sample UserRoles records'
+GO
+INSERT INTO [dbo].[UserRole]
+([UserID],[RoleID])
+VALUES
+(100,"Admin")
+GO
+
+print '' print '*** creating sample Room records'
+GO
+INSERT INTO [dbo].[Room]
+([RoomID], [RoomNotes])
+VALUES
+("A01", "This is a room with things in it."),
+("A02", "This is a room with things in it."),
+("A03", "This is a room with things in it."),
+("A04", "This is a room with things in it."),
+("A05", "This is a room with things in it."),
+("A06", "This is a room with things in it."),
+("A07", "This is a room with things in it."),
+("A08", "This is a room with things in it."),
+("A09", "This is a room with things in it."),
+("A10" , "This is a room with things in it."),
+("A11", "This is a room with things in it."),
+("A12", "This is a room with things in it."),
+("A13", "This is a room with things in it."),
+("A14", "This is a room with things in it."),
+("A15", "This is a room with things in it."),
+("A16", "This is a room with things in it."),
+("A17", "This is a room with things in it."),
+("A18", "This is a room with things in it."),
+("A19", "This is a room with things in it."),
+("A20", "This is a room with things in it."),
+("A21", "This is a room with things in it."),
+("A22", "This is a room with things in it."),
+("A23", "This is a room with things in it."),
+("A24", "This is a room with things in it."),
+("A25", "This is a room with things in it."),
+("A26", "This is a room with things in it."),
+("A27", "This is a room with things in it."),
+("A28", "This is a room with things in it."),
+("A29", "This is a room with things in it."),
+("A30", "This is a room with things in it."),
+("A31", "This is a room with things in it."),
+("A32", "This is a room with things in it."),
+("A33", "This is a room with things in it."),
+("A34", "This is a room with things in it."),
+("A35", "This is a room with things in it."),
+("A36", "This is a room with things in it."),
+("A37", "This is a room with things in it."),
+("A38", "This is a room with things in it."),
+("A39", "This is a room with things in it."),
+("A40", "This is a room with things in it."),
+("A41", "This is a room with things in it."),
+("A42", "This is a room with things in it."),
+("A43", "This is a room with things in it."),
+("A44", "This is a room with things in it."),
+("A45", "This is a room with things in it."),
+("A46", "This is a room with things in it."),
+("A47", "This is a room with things in it."),
+("A48", "This is a room with things in it."),
+("A49", "This is a room with things in it."),
+("A50", "This is a room with things in it."),
+("A51", "This is a room with things in it."),
+("A52", "This is a room with things in it."),
+("A53", "This is a room with things in it."),
+("B01", "This is a room with things in it."),
+("B02", "This is a room with things in it."),
+("B03", "This is a room with things in it."),
+("B04", "This is a room with things in it."),
+("B05", "This is a room with things in it."),
+("B06", "This is a room with things in it."),
+("B07", "This is a room with things in it."),
+("B08", "This is a room with things in it."),
+("B09", "This is a room with things in it."),
+("B10", "This is a room with things in it."),
+("B11", "This is a room with things in it."),
+("B12", "This is a room with things in it."),
+("B13", "This is a room with things in it."),
+("B14", "This is a room with things in it."),
+("B15", "This is a room with things in it."),
+("B16", "This is a room with things in it."),
+("B17", "This is a room with things in it."),
+("B18", "This is a room with things in it."),
+("B19", "This is a room with things in it."),
+("B20", "This is a room with things in it."),
+("LL01", "This is a room with things in it."),
+("LL02", "This is a room with things in it."),
+("LL03", "This is a room with things in it."),
+("LL04", "This is a room with things in it."),
+("LL05", "This is a room with things in it."),
+("LL06", "This is a room with things in it."),
+("LL07", "This is a room with things in it."),
+("LL08", "This is a room with things in it."),
+("LL09", "This is a room with things in it."),
+("LL10", "This is a room with things in it."),
+("LL11", "This is a room with things in it."),
+("LL12", "This is a room with things in it."),
+("LL13", "This is a room with things in it."),
+("LL14", "This is a room with things in it."),
+("LL15", "This is a room with things in it."),
+("LL16", "This is a room with things in it."),
+("LL17", "This is a room with things in it."),
+("LL18", "This is a room with things in it."),
+("LL19", "This is a room with things in it."),
+("LL20", "This is a room with things in it.")
 GO

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<DataObjects.Room>
+
+@{
+    ViewData["Title"] = ViewBag.title;
+}
+
+<h2>Room Index</h2>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomNotes)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomNotes)
+            </td>
+            <td>
+
+                @Html.ActionLink("Edit", "Edit", new { id = item.RoomID })
+
+                |
+                @Html.ActionLink("RoomDetails", "RoomDetails", new { id = item.RoomID.ToString() }) |
+
+                @Html.ActionLink("Deactivate", "Delete", new { id = item.RoomID })
+
+            </td>
+        </tr>
+    }
+
+</table>

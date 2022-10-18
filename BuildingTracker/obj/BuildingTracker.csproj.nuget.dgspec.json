@@ -67,9 +67,17 @@
               "target": "Package",
               "version": "[6.0.9, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.3, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.6.0, )"
             }
           },
           "imports": [

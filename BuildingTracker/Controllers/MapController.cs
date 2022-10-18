@@ -1,19 +1,38 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using DataObjects;
+using LogicLayer;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BuildingTracker.Controllers
 {
     public class MapController : Controller
     {
+        private IRoomManager _roomManager = null;
+        public MapController()
+        {
+            _roomManager = new RoomManager();
+        }
         // GET: MapController
         public ActionResult Index()
         {
-            return View();
+            ViewBag.title = "List of Rooms";
+            var rooms = _roomManager.SelectAllRoooms();
+            return View(rooms);
         }
         public ActionResult Map()
         {
-            return View();
+            ViewBag.title = "Map of Rooms";
+            var rooms = _roomManager.SelectAllRoooms();
+            return View(rooms);
         }
+
+        public ActionResult RoomDetails(string ID)
+        {
+            var room = _roomManager.GetRoom(ID);
+            ViewBag.Title = room.RoomID + "Details";
+            return View(room);
+        }
+
 
         // GET: MapController/Details/5
         public ActionResult Details(int id)

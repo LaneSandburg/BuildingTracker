@@ -1,0 +1,29 @@
+﻿@model DataObjects.Room
+@{
+    ViewData["Title"] = "Room Details";
+}
+
+<body>
+    <div class="text-center">
+        <h4>Room</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.RoomID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RoomID)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RoomNotes)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RoomNotes)
+            </dd>
+
+        </dl>
+    </div>
+</body>

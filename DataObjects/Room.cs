@@ -10,6 +10,7 @@ namespace DataObjects
     {
 
         public string RoomID { get; set; }
+        public string RoomNotes { get; set; }
 
     }
 }
