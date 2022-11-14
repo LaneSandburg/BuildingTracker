@@ -8,97 +8,116 @@
 <head>
     <script src="~/lib/jquery/dist/jquery.min.js"> </script>
     <script src="~/js/jquery.rwdImageMaps.min.js"></script>
+    <script src="~/js/map.js"></script>
+    <link href="~/css/map.css" rel="stylesheet" />
 </head>
 <body>
+
 <div class="text-center" style="max-width: 100%">
         <map name="Office-map">
             <area target="" alt="A1" title="A1" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[0].RoomID})" coords="281,458,219,457,218,404,260,403,261,423,283,422" shape="poly">
-            <area target="" alt="A2" title="A2" href="" coords="285,415,263,387" shape="rect">
-            <area target="" alt="A3" title="A3" href="" coords="246,399,220,335" shape="rect">
-            <area target="" alt="A4" title="A4" href="" coords="276,370,249,337" shape="rect">
-            <area target="" alt="A5" title="A5" href="" coords="304,369,279,337" shape="rect">
-            <area target="" alt="A6" title="A6" href="" coords="309,336,332,370" shape="rect">
-            <area target="" alt="A7" title="A7" href="" coords="336,338,359,371" shape="rect">
-            <area target="" alt="A8" title="A8" href="" coords="362,337,387,370" shape="rect">
-            <area target="" alt="A9" title="A9" href="" coords="389,335,413,369" shape="rect">
-            <area target="" alt="A10" title="A10" href="" coords="418,336,441,371" shape="rect">
-            <area target="" alt="A11" title="A11" href="" coords="445,336,497,363" shape="rect">
-            <area target="" alt="A12" title="A12" href="" coords="501,334,524,368" shape="rect">
-            <area target="" alt="A13" title="A13" href="" coords="529,334,547,367" shape="rect">
-            <area target="" alt="A14" title="A14" href="" coords="551,331,527,293" shape="rect">
-            <area target="" alt="A15" title="A15" href="" coords="524,330,492,306" shape="rect">
-            <area target="" alt="A16" title="A16" href="" coords="487,330,457,294" shape="rect">
-            <area target="" alt="A17" title="A17" href="" coords="488,289,458,256" shape="rect">
-            <area target="" alt="A18" title="A18" href="" coords="491,271,527,256" shape="rect">
-            <area target="" alt="A19" title="A19" href="" coords="582,292,625,312" shape="rect">
-            <area target="" alt="A20" title="A20" href="" coords="583,330,623,351" shape="rect">
-            <area target="" alt="A21" title="A21" href="" coords="583,355,625,376" shape="rect">
-            <area target="" alt="A22" title="A22" href="" coords="583,380,625,402" shape="rect">
-            <area target="" alt="A23" title="A23" href="" coords="582,406,625,429" shape="rect">
-            <area target="" alt="A24" title="A24" href="" coords="585,433,623,453" shape="rect">
-            <area target="" alt="A25" title="A25" href="" coords="639,292,679,312" shape="rect">
-            <area target="" alt="A26" title="A26" href="" coords="637,317,678,337" shape="rect">
-            <area target="" alt="A27" title="A27" href="" coords="680,365,639,343" shape="rect">
-            <area target="" alt="A28" title="A28" href="" coords="638,369,681,391" shape="rect">
-            <area target="" alt="A29" title="A29" href="" coords="639,395,679,417" shape="rect">
-            <area target="" alt="A30" title="A30" href="" coords="640,421,680,443" shape="rect">
-            <area target="" alt="A31" title="A31" href="" coords="640,446,682,467" shape="rect">
-            <area target="" alt="A32" title="A32" href="" coords="640,472,681,494" shape="rect">
-            <area target="" alt="A33" title="A33" href="" coords="639,496,681,532" shape="rect">
-            <area target="" alt="A34" title="A34" href="" coords="585,512,625,531" shape="rect">
-            <area target="" alt="A35" title="A35" href="" coords="512,512,553,533" shape="rect">
-            <area target="" alt="A36" title="A36" href="" coords="511,487,553,508" shape="rect">
-            <area target="" alt="A37" title="A37" href="" coords="507,519,469,484" shape="rect">
-            <area target="" alt="A38" title="A38" href="" coords="466,519,430,487" shape="rect">
-            <area target="" alt="A39" title="A39" href="" coords="427,519,390,487" shape="rect">
-            <area target="" alt="A40" title="A40" href="" coords="386,519,349,485" shape="rect">
-            <area target="" alt="A41" title="A41" href="" coords="344,520,293,488" shape="rect">
-            <area target="" alt="A42" title="A42" href="" coords="219,462,289,524" shape="rect">
-            <area target="" alt="A43" title="A43" href="" coords="307,435,344,468" shape="rect">
-            <area target="" alt="A44" title="A44" href="" coords="348,435,387,469" shape="rect">
-            <area target="" alt="A45" title="A45" href="" coords="389,436,412,466" shape="rect">
-            <area target="" alt="A46" title="A46" href="" coords="431,436,496,469" shape="rect">
-            <area target="" alt="A47" title="A47" href="" coords="528,389,548,415" shape="rect">
-            <area target="" alt="A48" title="A48" href="" coords="502,386,526,419" shape="rect">
-            <area target="" alt="A49" title="A49" href="" coords="498,420,473,383" shape="rect">
-            <area target="" alt="A50" title="A50" href="" coords="471,418,431,386" shape="rect">
-            <area target="" alt="A51" title="A51" href="" coords="414,418,389,385" shape="rect">
-            <area target="" alt="A52" title="A52" href="" coords="387,418,363,385" shape="rect">
-            <area target="" alt="A53" title="A53" href="" coords="360,418,336,384" shape="rect">
-            <area target="" alt="B1" title="B1" href="" coords="488,170,541,204" shape="rect">
-            <area target="" alt="B2" title="B2" href="" coords="489,208,527,252" shape="rect">
-            <area target="" alt="B3" title="B3" href="" coords="471,252,434,224" shape="rect">
-            <area target="" alt="B4" title="B4" href="" coords="436,206,473,223" shape="rect">
-            <area target="" alt="B5" title="B5" href="" coords="472,202,435,182" shape="rect">
-            <area target="" alt="B6" title="B6" href="" coords="473,154,434,131" shape="rect">
-            <area target="" alt="B7" title="B7" href="" coords="433,105,473,128" shape="rect">
-            <area target="" alt="B8" title="B8" href="" coords="492,105,530,128" shape="rect">
-            <area target="" alt="B9" title="B9" href="" coords="492,132,529,152" shape="rect">
-            <area target="" alt="B10" title="B10" href="" coords="531,105,583,153" shape="rect">
-            <area target="" alt="B11" title="B11" href="" coords="586,105,612,151" shape="rect">
-            <area target="" alt="B12" title="B12" href="" coords="643,105,668,127" shape="rect">
-            <area target="" alt="B13" title="B13" href="" coords="671,105,695,127" shape="rect">
-            <area target="" alt="B14" title="B14" href="" coords="699,152,656,130" shape="rect">
-            <area target="" alt="B15" title="B15" href="" coords="653,154,613,127" shape="rect">
-            <area target="" alt="B16" title="B16" href="" coords="659,169,696,189" shape="rect">
-            <area target="" alt="B17" title="B17" href="" coords="655,193,697,251" shape="rect">
-            <area target="" alt="B18" title="B18" href="" coords="698,288,642,253" shape="rect">
-            <area target="" alt="B19" title="B19" href="" coords="638,287,582,244" shape="rect">
-            <area target="" alt="B20" title="B20" href="" coords="639,242,579,168" shape="rect">
+            <area target="" alt="A2" title="A2" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[1].RoomID})" coords="285,415,263,387" shape="rect">
+            <area target="" alt="A3" title="A3" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[2].RoomID})" coords="246,399,220,335" shape="rect">
+            <area target="" alt="A4" title="A4" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[3].RoomID})" coords="276,370,249,337" shape="rect">
+            <area target="" alt="A5" title="A5" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[4].RoomID})" coords="304,369,279,337" shape="rect">
+            <area target="" alt="A6" title="A6" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[5].RoomID})" coords="309,336,332,370" shape="rect">
+            <area target="" alt="A7" title="A7" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[6].RoomID})" coords="336,338,359,371" shape="rect">
+            <area target="" alt="A8" title="A8" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[7].RoomID})" coords="362,337,387,370" shape="rect">
+            <area target="" alt="A9" title="A9" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[8].RoomID})" coords="389,335,413,369" shape="rect">
+            <area target="" alt="A10" title="A10" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[9].RoomID})" coords="418,336,441,371" shape="rect">
+            <area target="" alt="A11" title="A11" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[10].RoomID})" coords="445,336,497,363" shape="rect">
+            <area target="" alt="A12" title="A12" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[11].RoomID})" coords="501,334,524,368" shape="rect">
+            <area target="" alt="A13" title="A13" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[12].RoomID})" coords="529,334,547,367" shape="rect">
+            <area target="" alt="A14" title="A14" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[13].RoomID})" coords="551,331,527,293" shape="rect">
+            <area target="" alt="A15" title="A15" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[14].RoomID})" coords="524,330,492,306" shape="rect">
+            <area target="" alt="A16" title="A16" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[15].RoomID})" coords="487,330,457,294" shape="rect">
+            <area target="" alt="A17" title="A17" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[16].RoomID})" coords="488,289,458,256" shape="rect">
+            <area target="" alt="A18" title="A18" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[17].RoomID})" coords="491,271,527,256" shape="rect">
+            <area target="" alt="A19" title="A19" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[18].RoomID})" coords="582,292,625,312" shape="rect">
+            <area target="" alt="A20" title="A20" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[19].RoomID})" coords="583,330,623,351" shape="rect">
+            <area target="" alt="A21" title="A21" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[20].RoomID})" coords="583,355,625,376" shape="rect">
+            <area target="" alt="A22" title="A22" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[21].RoomID})" coords="583,380,625,402" shape="rect">
+            <area target="" alt="A23" title="A23" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[22].RoomID})" coords="582,406,625,429" shape="rect">
+            <area target="" alt="A24" title="A24" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[23].RoomID})" coords="585,433,623,453" shape="rect">
+            <area target="" alt="A25" title="A25" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[24].RoomID})" coords="639,292,679,312" shape="rect">
+            <area target="" alt="A26" title="A26" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[25].RoomID})" coords="637,317,678,337" shape="rect">
+            <area target="" alt="A27" title="A27" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[26].RoomID})" coords="680,365,639,343" shape="rect">
+            <area target="" alt="A28" title="A28" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[27].RoomID})" coords="638,369,681,391" shape="rect">
+            <area target="" alt="A29" title="A29" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[28].RoomID})" coords="639,395,679,417" shape="rect">
+            <area target="" alt="A30" title="A30" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[29].RoomID})" coords="640,421,680,443" shape="rect">
+            <area target="" alt="A31" title="A31" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[30].RoomID})" coords="640,446,682,467" shape="rect">
+            <area target="" alt="A32" title="A32" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[31].RoomID})" coords="640,472,681,494" shape="rect">
+            <area target="" alt="A33" title="A33" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[32].RoomID})" coords="639,496,681,532" shape="rect">
+            <area target="" alt="A34" title="A34" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[33].RoomID})" coords="585,512,625,531" shape="rect">
+            <area target="" alt="A35" title="A35" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[34].RoomID})" coords="512,512,553,533" shape="rect">
+            <area target="" alt="A36" title="A36" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[35].RoomID})" coords="511,487,553,508" shape="rect">
+            <area target="" alt="A37" title="A37" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[36].RoomID})" coords="507,519,469,484" shape="rect">
+            <area target="" alt="A38" title="A38" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[37].RoomID})" coords="466,519,430,487" shape="rect">
+            <area target="" alt="A39" title="A39" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[38].RoomID})" coords="427,519,390,487" shape="rect">
+            <area target="" alt="A40" title="A40" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[39].RoomID})" coords="386,519,349,485" shape="rect">
+            <area target="" alt="A41" title="A41" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[40].RoomID})" coords="344,520,293,488" shape="rect">
+            <area target="" alt="A42" title="A42" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[41].RoomID})" coords="219,462,289,524" shape="rect">
+            <area target="" alt="A43" title="A43" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[42].RoomID})" coords="307,435,344,468" shape="rect">
+            <area target="" alt="A44" title="A44" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[43].RoomID})" coords="348,435,387,469" shape="rect">
+            <area target="" alt="A45" title="A45" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[44].RoomID})" coords="389,436,412,466" shape="rect">
+            <area target="" alt="A46" title="A46" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[45].RoomID})" coords="431,436,496,469" shape="rect">
+            <area target="" alt="A47" title="A47" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[46].RoomID})" coords="528,389,548,415" shape="rect">
+            <area target="" alt="A48" title="A48" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[47].RoomID})" coords="502,386,526,419" shape="rect">
+            <area target="" alt="A49" title="A49" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[48].RoomID})" coords="498,420,473,383" shape="rect">
+            <area target="" alt="A50" title="A50" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[49].RoomID})" coords="471,418,431,386" shape="rect">
+            <area target="" alt="A51" title="A51" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[50].RoomID})" coords="414,418,389,385" shape="rect">
+            <area target="" alt="A52" title="A52" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[51].RoomID})" coords="387,418,363,385" shape="rect">
+            <area target="" alt="A53" title="A53" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[52].RoomID})" coords="360,418,336,384" shape="rect">
+            <area target="" alt="B1" title="B1" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[53].RoomID})" coords="488,170,541,204" shape="rect">
+            <area target="" alt="B2" title="B2" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[54].RoomID})" coords="489,208,527,252" shape="rect">
+            <area target="" alt="B3" title="B3" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[55].RoomID})" coords="471,252,434,224" shape="rect">
+            <area target="" alt="B4" title="B4" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[56].RoomID})" coords="436,206,473,223" shape="rect">
+            <area target="" alt="B5" title="B5" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[57].RoomID})" coords="472,202,435,182" shape="rect">
+            <area target="" alt="B6" title="B6" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[58].RoomID})" coords="473,154,434,131" shape="rect">
+            <area target="" alt="B7" title="B7" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[59].RoomID})" coords="433,105,473,128" shape="rect">
+            <area target="" alt="B8" title="B8" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[60].RoomID})" coords="492,105,530,128" shape="rect">
+            <area target="" alt="B9" title="B9" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[61].RoomID})" coords="492,132,529,152" shape="rect">
+            <area target="" alt="B10" title="B10" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[62].RoomID})" coords="531,105,583,153" shape="rect">
+            <area target="" alt="B11" title="B11" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[63].RoomID})" coords="586,105,612,151" shape="rect">
+            <area target="" alt="B12" title="B12" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[64].RoomID})" coords="643,105,668,127" shape="rect">
+            <area target="" alt="B13" title="B13" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[65].RoomID})" coords="671,105,695,127" shape="rect">
+            <area target="" alt="B14" title="B14" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[66].RoomID})" coords="699,152,656,130" shape="rect">
+            <area target="" alt="B15" title="B15" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[67].RoomID})" coords="653,154,613,127" shape="rect">
+            <area target="" alt="B16" title="B16" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[68].RoomID})" coords="659,169,696,189" shape="rect">
+            <area target="" alt="B17" title="B17" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[69].RoomID})" coords="655,193,697,251" shape="rect">
+            <area target="" alt="B18" title="B18" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[70].RoomID})" coords="698,288,642,253" shape="rect">
+            <area target="" alt="B19" title="B19" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[71].RoomID})" coords="638,287,582,244" shape="rect">
+            <area target="" alt="B20" title="B20" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[72].RoomID})" coords="639,242,579,168" shape="rect">
         </map>
-    <img src="~/pics/Office_overlay.png" usemap="#Office-map" style=" max-width: 100%; justify-content:left;" />
-    <img src="~/pics/Office_overlay_LL.png"  style=" max-width: 20%; padding-top: 35%; justify-content:right; " />
+        <map name="office_LL_map">
+             <area alt="LL1" title="LL1" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[73].RoomID})" coords="417,-445,524,-391" shape="rect">
+             <area alt="LL2" title="LL2" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[74].RoomID})" coords="435,-369,477,-335" shape="rect">
+             <area alt="LL3" title="LL3" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[75].RoomID})" coords="482,-382,524,-361" shape="rect">
+             <area alt="LL4" title="LL4" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[76].RoomID})" coords="484,-358,524,-334" shape="rect">
+             <area alt="LL5" title="LL5" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[77].RoomID})" coords="486,-331,523,-311" shape="rect">
+             <area alt="LL6" title="LL6" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[78].RoomID})" coords="484,-304,526,-285" shape="rect">
+             <area alt="LL7" title="LL7" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[79].RoomID})" coords="486,-281,527,-246" shape="rect">
+             <area alt="LL8" title="LL8" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[80].RoomID})" coords="354,-296,396,-246" shape="rect">
+             <area alt="LL9" title="LL9" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[81].RoomID})" coords="328,-296,350,-259" shape="rect">
+             <area alt="LL10" title="LL10" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[82].RoomID})" coords="304,-298,327,-260" shape="rect">
+             <area alt="LL11" title="LL11" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[83].RoomID})" coords="277,-298,301,-260" shape="rect">
+             <area alt="LL12" title="LL12" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[84].RoomID})" coords="256,-298,273,-262" shape="rect">
+             <area alt="LL13" title="LL13" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[85].RoomID})" coords="237,-299,253,-261" shape="rect">
+             <area alt="LL14" title="LL14" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[86].RoomID})" coords="211,-298,238,-259" shape="rect">
+             <area alt="LL15" title="LL15" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[87].RoomID})" coords="177,-297,210,-259" shape="rect">
+             <area alt="LL16" title="LL16" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[88].RoomID})" coords="127,-298,176,-261" shape="rect">
+             <area alt="LL17" title="LL17" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[89].RoomID})" coords="62,-297,126,-258" shape="rect">
+             <area alt="LL18" title="LL18" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[90].RoomID})" coords="60,-358,125,-307" shape="rect">
+             <area alt="LL19" title="LL19" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[91].RoomID})" coords="178,-358,321,-314" shape="rect">
+             <area alt="LL20" title="LL20" href="@Url.Action("RoomDetails", "Map",new{ID = rooms[92].RoomID})" coords="324,-360,346,-314" shape="rect">
+        </map>
+    <img id="img1" src="~/pics/Office_overlay.png" usemap="#Office-map"  />
+        <img id="img2" src="~/pics/Office_overlay_LL.png" usemap="office_LL_map" onclick="changeImage('/pics/Office_overlay.png','/pics/Office_overlay_LL.png')" />
     <br/>
-    <img src="~/pics/Office_overlay_key.png" style=" padding-left: 15%; max-width: 45%;" />
-    <br/>
-        <a class="nav-link text-dark" asp-area="" asp-controller="Map" asp-action="RoomDetails">Map</a>
-    
-    
-
-   
+    <img src="~/pics/Office_overlay_key.png" style=" padding-left: 15%; max-width: 45%;" />    
 
 </div>
 
-<script>$('img[usemap]').rwdImageMaps();</script>
+@*<script>$('img[usemap]').rwdImageMaps();</script>*@
     
 </body>

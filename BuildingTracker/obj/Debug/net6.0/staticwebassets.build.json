@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q3lvEiTqDjkthklYKxg/UAq4WCKR/10Yx+hoCJe39oM=",
+  "Hash": "cUqDBfd0gToimA/UTZ/CWYwVmL7Ww6kgudb1RFXyBy4=",
   "Source": "BuildingTracker",
   "BasePath": "_content/BuildingTracker",
   "Mode": "Default",
@@ -1071,6 +1071,23 @@
       "OriginalItemSpec": "C:\\Users\\lane\\Documents\\BuildingTracker\\BuildingTracker\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BuildingTracker.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\lane\\Documents\\BuildingTracker\\BuildingTracker\\wwwroot\\css\\Map.css",
+      "SourceId": "BuildingTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lane\\Documents\\BuildingTracker\\BuildingTracker\\wwwroot\\",
+      "BasePath": "_content/BuildingTracker",
+      "RelativePath": "css/Map.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Map.css"
+    },
+    {
       "Identity": "C:\\Users\\lane\\Documents\\BuildingTracker\\BuildingTracker\\wwwroot\\css\\site.css",
       "SourceId": "BuildingTracker",
       "SourceType": "Discovered",
@@ -1154,6 +1171,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\LICENSE"
+    },
+    {
+      "Identity": "C:\\Users\\lane\\Documents\\BuildingTracker\\BuildingTracker\\wwwroot\\js\\Map.js",
+      "SourceId": "BuildingTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lane\\Documents\\BuildingTracker\\BuildingTracker\\wwwroot\\",
+      "BasePath": "_content/BuildingTracker",
+      "RelativePath": "js/Map.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Map.js"
     },
     {
       "Identity": "C:\\Users\\lane\\Documents\\BuildingTracker\\BuildingTracker\\wwwroot\\js\\README.md",

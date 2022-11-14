@@ -1,0 +1,9 @@
+﻿#img1 {
+    max-width: 100%; 
+    justify-content:left;
+}
+#img2 {
+    max-width: 20%;
+    padding-top: 35%;
+    justify-content:right;
+}
